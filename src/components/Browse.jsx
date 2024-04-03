@@ -7,6 +7,7 @@ import MainContainer from "./MainCointainer.jsx";
 import SecondaryContainer from "./SecondaryContainer.jsx";
 import useUpcomingMovies from '../hooks/useUpcomingMovies.js';
 import useTopRatedMovies from '../hooks/useTopRatedMovies.js';
+import GPTSearch from './GPTSearch.jsx';
 
 const Browse = () => {
 
@@ -19,8 +20,10 @@ useTopRatedMovies();
   return (
     <div>
         <Header/>
+        <GPTSearch/>
         <MainContainer/>
         <SecondaryContainer/>
+        
         {/*
         MainCotainer
       -VideoBackground

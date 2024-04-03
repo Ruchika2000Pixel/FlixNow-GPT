@@ -48,14 +48,29 @@ navigate("/");
 return ()=> unsubscribe();
 },[]);
 
+const handleGPTSearchClick=()=>
+{
+  //Toggle GPT Search 
+}
+
 
   return (
     <div className="absolute w-screen bg-gradient-to-b from-gray-950 flex justify-between">
       <img className=" mx-2  w-[350px] " src={logo} />
-      {user && <div className="py-8 px-10 ">
-        <img src={emoji} className=" w-16 h-30 rounded-lg"/>
-        <button onClick={handleSignOut} className="  text-red-600 font-bold hover:underline cursor-pointer">Sign Out</button>
-  
+      {user &&
+       <div className="flex md:justify-end">
+<button type="button" 
+class="text-white
+ bg-gradient-to-br from-purple-950 via-purple-700 to-gray-800
+ hover:bg-gradient-to-bl 
+  font-medium  rounded-lg text-lg px-6 py-4 h-16 my-6 text-center me-2 mb-2"
+  onClick={handleGPTSearchClick}> 
+GPT Search
+ </button > 
+ <span>    
+  <img src={emoji} alt="usericon"  className=" mx-8 mt-4 w-18 h-20 rounded-lg"/>
+        <button onClick={handleSignOut} className=" ml-8 text-white font-medium  text-lg hover:underline cursor-pointer">Sign Out</button>
+        </span>
       </div>
 }
     </div>
