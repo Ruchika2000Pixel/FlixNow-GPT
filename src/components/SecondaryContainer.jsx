@@ -14,9 +14,9 @@ console.log(movies);
     <div className="bg-gray-950">
       <div className='pl-12  -mt-80 relative z-20'>
      <MovieList title={"Now Playing"} movies={movies.nowPlayingMovies}/>
-     <MovieList title={"Popular"} movies={movies.nowPlayingMovies}/>
-     <MovieList title={"Top Rated"} movies={movies.nowPlayingMovies}/>
-     <MovieList title={"Upcoming"} movies={movies.nowPlayingMovies}/>
+     <MovieList title={"Popular"} movies={movies.nowPopularMovies}/>
+     <MovieList title={"Top Rated"} movies={movies.nowTopRatedMovies}/>
+     <MovieList title={"Upcoming"} movies={movies.nowUpcomingMovies}/>
 
         </div>
         </div>)
