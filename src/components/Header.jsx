@@ -8,12 +8,14 @@ import { useEffect } from "react";
 import { addUser ,removeUser} from "../utils/userSlice";
 import { toggleGPTSearchView } from "../utils/GPTSlice";
 import { SUPPORTED_LANGUAGES } from "../utils/const/constants";
+import { changeLanguage } from "../utils/configSlice";
 
 
 const Header = () => {
   const  dispatch=useDispatch();
   const navigate = useNavigate();
-  const user=useSelector((store)=>store.user)
+  const user=useSelector((store)=>store.user);
+  const showGPTSearch= useSelector((store)=>store.gpt.showGPTSearch);
   const handleSignOut = () => {
     signOut(auth).then(() => {
       navigate("/");
@@ -53,7 +55,12 @@ const handleGPTSearchClick=()=>
 {
   //Toggle GPT Search 
   dispatch(toggleGPTSearchView());
-}
+};
+
+const handleLanguageChange = (e) => {
+ //console.log(e.target.value) ;
+ dispatch(changeLanguage(e.target.value));
+};
 
 
   return (
@@ -61,18 +68,21 @@ const handleGPTSearchClick=()=>
       <img className=" ml-2   w-[350px] " src={logo} />
       {user &&
        <div className="flex md:justify-end">
-        <select className="p-2 text-lg font-medium mx-8 my-8 w-32 h-16 rounded-lg bg-gradient-to-br  from-gray-800 via-gray-500 to-gray-700 hover:bg-gradient-to-bl bg-gray-800 text-white">
+        {showGPTSearch && (<select 
+        onChange={handleLanguageChange}
+        className="p-2 text-lg font-medium mx-8 my-8 w-32 h-16 rounded-lg bg-gradient-to-br  from-gray-800 via-gray-500 to-gray-700 hover:bg-gradient-to-bl bg-gray-800 text-white">
           {SUPPORTED_LANGUAGES.map(lang =><option key={lang.identifier} value={lang.identifier}>  {lang.name}  </option>)}
 
 
         </select>
+        )}
 <button  
 className="text-white
  bg-gradient-to-br from-purple-950 via-purple-700 to-gray-800
  hover:bg-gradient-to-bl 
   font-medium  rounded-xl text-lg px-4 py-2 h-16 my-8 text-center me-2 mb-2 cursor-pointer "
   onClick={handleGPTSearchClick}> 
-GPT Search
+      {showGPTSearch ? "HomePage":"GPT Search"}
  </button > 
 
  <button

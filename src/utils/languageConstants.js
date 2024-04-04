@@ -13,7 +13,7 @@ const lang ={
     },
 
     odia:{
-    search: "ସର",
+    search: "ସର୍ଚ",
     gptSearchPlaceholder:"ଆଜି ଆପଣ କ'ଣ ଦେଖିବାକୁ ପସନ୍ଦ କରିବେ?"
 }
 };
