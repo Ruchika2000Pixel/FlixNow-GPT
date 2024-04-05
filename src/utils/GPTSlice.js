@@ -14,11 +14,11 @@ const GPTSlice = createSlice({
         },
         addGptMovieResult:(state,action)=> {
             const {movieNames , movieResults}=action.payload;
-         state.gptMovies=movieNames;  
+         state.movieNames=movieNames;  
          state. movieResults=movieResults;
         }
     },
 });
 
 export const {toggleGPTSearchView,addGptMovieResult}=GPTSlice.actions;
-export default GPTSlice.reducer;
+export default GPTSlice.reducer; 
