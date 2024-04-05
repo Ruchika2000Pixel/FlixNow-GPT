@@ -6,7 +6,7 @@ import img from "../utils/const/gpt_final3.png"
 const GPTSearch = () => {
   return (
     <div>
-        <div className='absolute -z-10 w-screen'>
+        <div className='absolute -z-10 w-screen bg-fixed'>
             <img 
             src={img}
             alt="bg_img"/>

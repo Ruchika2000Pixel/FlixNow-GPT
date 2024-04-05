@@ -13,4 +13,4 @@ export const API_OPTIONS=  {
 {identifier: "odia",name:"Odia"},
 {identifier: "spanish",name:"Spanish"}] ;
 
-export const OPENAI_KEY="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";
+export const API_KEY="AIzaSyAQ4I3L1GTLnZuHKwH3HgKwjNTn0INa4Zg";
