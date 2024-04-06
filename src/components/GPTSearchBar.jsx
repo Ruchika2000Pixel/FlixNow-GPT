@@ -65,15 +65,15 @@ dispatch(addGptMovieResult({movieNames:gptMovies,movieResults:tmdbResults}));
 
 
   return (
-    <div className='pt-[8%] flex justify-center'>
-        <form className="w-1/2 rounded-xl bg-gray-800  grid grid-cols-12"
+    <div className=' pt-[8%] flex justify-center'>
+        <form className=" w-1/2   rounded-xl bg-gray-800  grid grid-cols-12"
         onSubmit={(e)=> e.preventDefault()}>
             <input 
             ref={searchText}
             type="text" 
-            className='p-4 m-2 bg-black text-cyan-50 text-lg font-medium col-span-9'
+            className='p-4 m-1.5  bg-black text-cyan-50 text-lg font-medium col-span-9'
             placeholder={lang[langKey].gptSearchPlaceholder}/>
-            <button className="col-span-3 m-2 font-semibold text-white bg-gradient-to-r from-red-800 via-red-600 to-red-700 hover:bg-gradient-to-br focus:ring-2 focus:outline-none focus:ring-red-500 dark:focus:ring-red-800  rounded-lg text-xl px-5 py-2.5 text-center "
+            <button className="col-span-3 m-1.5 font-semibold text-white bg-gradient-to-r from-red-800 via-red-600 to-red-700 hover:bg-gradient-to-br focus:ring-2 focus:outline-none focus:ring-red-500 dark:focus:ring-red-800  rounded-lg text-xl px-5 py-2.5 text-center "
             onClick={handleGptSearchClick}>
                {lang[langKey].search}
             </button>

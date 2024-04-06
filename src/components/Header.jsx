@@ -64,8 +64,8 @@ const handleLanguageChange = (e) => {
 
 
   return (
-    <div className=" w-screen absolute bg-gradient-to-b from-gray-950 flex justify-between">
-      <img className=" ml-2   w-[350px] " src={logo} />
+    <div className=" w-screen absolute  bg-gradient-to-b from-gray-950 flex justify-between ">
+      <img className=" ml-2  mx-auto md:mx-0 w-[350px] " src={logo} />
       {user &&
        <div className="flex md:justify-end">
         {showGPTSearch && (<select 

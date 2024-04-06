@@ -82,7 +82,7 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute w-screen">
-        <img className="relative w-full  mix-blend-overlay" src={bg_final} alt="Logo" />
+        <img className="relative w-full h-screen object-cover mix-blend-overlay" src={bg_final} alt="backgroung_img" />
       </div>
       <form onSubmit={(e)=>e.preventDefault()}
       className="absolute w-3/12 p-8 bg-black my-52 mx-auto right-0 left-0 text-white rounded-xl bg-opacity-70">
